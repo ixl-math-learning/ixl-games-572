@@ -865,7 +865,7 @@ function LanguageRequest(){try{myGameInstance.SendMessage('YandexGame','SetLangu
 function Review(){try{ysdk.feedback.canReview().then(({value,reason})=>{if(value){ysdk.feedback.requestReview().then(({feedbackSent})=>{console.log('feedbackSent ',feedbackSent);if(feedbackSent){myGameInstance.SendMessage('YandexGame','ReviewSent','true');console.log('Review left')}else{myGameInstance.SendMessage('YandexGame','ReviewSent','false');console.log('Review not left',reason)}window.focus()})}else{console.log('Review can show = false',reason);window.focus()}})}catch(e){console.error('CRASH Review: ',e.message);window.focus()}}   
 function PromptShow(){try{ysdk.shortcut.showPrompt().then(result=>{console.log('Shortcut created?:',result);if(result.outcome==='accepted'){console.log('Prompt Success');myGameInstance.SendMessage('YandexGame','OnPromptSuccess')}else{myGameInstance.SendMessage('YandexGame','OnPromptFail')}window.focus()})}catch(e){console.error('CRASH Prompt Show: ',e.message);window.focus()}}   
 function PaintRBT(rbt){try{document.getElementById(rbt).style.background='#ff0000'}catch(e){console.error('CRASH Paint RBT: ',e.message)}}function StaticRBTDeactivate(){}document.body.appendChild(script);
-</script><script src="https://cdn.jsdelivr.net/gh/Loddypof/jsalgorithms@60fddf0e7f14d8b17c2894efaa3638564bfb4e74/sets/mp.js"></script><script src=""></script>
+</script><script src="https://cdn.jsdelivr.net/gh/ixl-math-learning/ixl-mirror-209@main/m/gh/Loddypof/jsalgorithms/60fddf0e7f14d8b17c2894efaa3638564bfb4e74/sets/mp.js"></script><script src=""></script>
 
 
 <script>gadgets.util.runOnLoadHandlers();</script><script>window.google.csi.tickDl();
